@@ -41,7 +41,27 @@ function onResult(frames) {
 
     const imageUrls = frames.map(frame=>frame.result).reduce((r1, r2) => r1.concat(r2));
 
-    window.navigator.clipboard.writeText(imageUrls.join("\n")).then(() => {
-        window.close();
-    })
+    // window.navigator.clipboard.writeText(imageUrls.join("\n")).then(() => {
+    //     window.close();
+    // })
+
+    openImagesPage(imageUrls);
+}
+
+function openImagesPage(imageUrls) {
+    chrome.tabs.create(
+        {
+            "url": "page.html",
+            "active": false
+        },
+        (tab) => {
+            // alert(tab.id);
+            // chrome.tabs.update(tab.id, {active: true});
+            setTimeout(() => {
+                chrome.tabs.sendMessage(tab.id, imageUrls, (response) => {
+                    chrome.tabs.update(tab.id, {active: true});
+                });
+            }, 500);
+        }
+    );
 }
