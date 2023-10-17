@@ -4,8 +4,8 @@ This is an extension created mostly for my needs. The extension grabs all `img` 
 
 ## How to use
 
-Just click on **Grab Images!** and it will search the page with all `img` tagged elements and copy their URLs.
+Just click on **Grab Images!** and it will search the page with all `img` tagged elements and show them on a new tab; `page.html`.
 
 ## Status
 
-At the moment, it can only copy the URLs of the images. I am working on the download part.
+At the moment, it can only show the images on a new tab. I am working on the download part.
