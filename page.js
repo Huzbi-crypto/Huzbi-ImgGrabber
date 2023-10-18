@@ -72,9 +72,7 @@ document.getElementById("downloadBtn").addEventListener("click", async () => {
  */
 function getSelectedUrls() {
     const urls =
-        Array.from(document.querySelectorAll(".container input"))
-            .filter(item => item.checked)
-            .map(item => item.getAttribute("url"));
+        Array.from(document.querySelectorAll(".container input")).filter(item => item.checked).map(item => item.getAttribute("url"));
     if (!urls || !urls.length) {
         throw new Error("Please, select at least one image");
     }
