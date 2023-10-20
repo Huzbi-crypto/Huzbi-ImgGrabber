@@ -1,6 +1,5 @@
 /**
- * Listener that receives a message with a list of image
- * URL's to display from popup.
+ * Listener that receives a message with a list of image URL's to display from popup.
  */
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         addImagesToContainer(message)
@@ -8,8 +7,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     });
 
 /**
- * Function that used to display an UI to display a list 
- * of images
+ * Function that used to display an UI to display a list of images
  * @param {} urls - Array of image URLs
  */
 function addImagesToContainer(urls) {
@@ -21,8 +19,7 @@ function addImagesToContainer(urls) {
 }
 
 /**
- * Function dynamically add a DIV with image and checkbox to 
- * select it to the container DIV
+ * Function dynamically add a DIV with image and checkbox to select it to the container DIV
  * @param {*} container - DOM node of a container div 
  * @param {*} url - URL of image 
  */
@@ -66,8 +63,7 @@ document.getElementById("downloadBtn").addEventListener("click", async () => {
     })
 
 /**
- * Function used to get URLs of all selected image
- * checkboxes
+ * Function used to get URLs of all selected images' checkboxes
  * @returns Array of URL string 
  */
 function getSelectedUrls() {
@@ -80,8 +76,7 @@ function getSelectedUrls() {
 }
 
 /**
- * Function used to download all image files, identified 
- * by `urls`, and compress them to a ZIP
+ * Function used to download all image files, identified by `urls`, and compress them to a ZIP
  * @param {} urls - list of URLs of files to download
  * @returns a BLOB of generated ZIP-archive
  */
