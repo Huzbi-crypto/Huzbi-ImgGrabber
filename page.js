@@ -96,9 +96,8 @@ async function createArchive(urls) {
 }
 
 /**
- * Function used to return a file name for
- * image blob only if it has a correct image type
- * and positive size. Otherwise throws an exception.
+ * Function used to return a file name for image blob only if it has a correct image type and positive size. 
+ * Otherwise throws an exception.
  * @param {} index - An index of URL in an input
  * @param {*} blob - BLOB with a file content 
  * @returns 
@@ -113,9 +112,7 @@ function checkAndGetFileName(index, blob) {
 }
 
 /**
- * Triggers browser "Download file" action
- * using a content of a file, provided by 
- * "archive" parameter
+ * Triggers browser "Download file" action using a content of a file, provided by "archive" parameter
  * @param {} archive - BLOB of file to download
  */
 function downloadArchive(archive) {
